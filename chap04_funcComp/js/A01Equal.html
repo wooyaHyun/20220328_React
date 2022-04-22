@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const check = true;
+    const num = 1;
+
+    // 묵시적인 형 변환이 이루어진 후 비교한다
+    // true => 1, false => 0
+    // '10' == 10 => '10'을 숫자 10으로 변환 후 비교
+    console.log(check == num);      // true
+    console.log('10' == 10);        // true
+
+    // === type 까지 체크
+    console.log(true === 1, '10' === 10);   // false, false
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

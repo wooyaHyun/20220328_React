@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A02Event</title>
+</head>
+<body>
+
+  <button id="btn01">Click</button>
+  <button id="btn02">Click</button>
+
+  <script>
+    document.getElementById('btn01').addEventListener('click', function(evt, x){
+      console.log(evt.target);
+      console.log(x);
+    });
+
+    function view(evt, x) {
+      console.log('View');
+      console.log(evt.target)
+      console.log(x);
+    }
+
+    document.getElementById('btn02').addEventListener('click', function(evt){
+      console.log(evt.target);
+      view(evt, 100)
+    });
+
+
+  </script>
+</body>
+</html>

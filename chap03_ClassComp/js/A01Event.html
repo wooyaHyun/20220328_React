@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+</head>
+<body>
+  <button id="btn">Click</button>
+
+
+  <script>
+    class App {
+      constructor() {
+        this.cnt = 0;
+        this.btn = document.getElementById('btn');
+        // btn.addEventListener('click', this.clickEvent);      // this button
+
+        // 이 영역에서 this는 App 클래스
+        this.btnEvent = this.clickEvent.bind(this);             // bind는 this를 동적으로 변경해서 새로운 함수를 리턴
+        btn.addEventListener('click', this.btnEvent);
+      }
+
+      clickEvent() {
+        console.log(this);
+        this.cnt++;
+        console.log(this.cnt)
+      }
+      
+    }
+    new App();
+
+  </script>
+</body>
+</html>

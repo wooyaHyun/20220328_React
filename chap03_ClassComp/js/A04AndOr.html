@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let check = undefined;
+    let value = check || 0;         // check의 값이 없으면 뒤의 값이 대입
+
+    console.log(value)
+
+    let isChecked = 10;
+    let result = isChecked && 100;  // 앞에 값이 있으면 뒤의 값이 대입
+    console.log(result);
+
+  </script>
+</body>
+</html>
